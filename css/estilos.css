@@ -1,0 +1,38 @@
+body{
+background-image: url(../img/fondo2.jpeg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.imagen{
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(82, 80, 80);
+}
+.imagen2{
+    position: relative;
+    left: 830px;
+    top: 320px;
+    width: 250px;
+    height: 200px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(82, 80, 80);
+}
+.imagen3{
+    z-index: 1;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 480px;
+}
+.imagen4{
+    z-index: 1;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 52px;
+    left: 845px;
+}
+
