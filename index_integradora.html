@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reservas (DATID)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+      header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; /* Reduce el padding, ajusta según necesidades */
+    background-color: #ffffff;
+    border: 2px solid #4CAF50; /* Color verde, cambia esto por el código exacto del verde de UTEZ */
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+/* Estilos para el logotipo de UTEZ */
+#l_utez {
+    width: 280px; /* Ajusta el tamaño según tus necesidades */
+    height: 100px; /* Mantiene la proporción de la imagen */
+    float: right;
+    margin: 0; /* Elimina todo margen para ajustar espacios */
+    padding: 0; /* Asegura que no haya padding adicional */
+}
+
+/* Estilos para el logotipo de DATID */
+#l_datid {
+    width: 300px; /* Ajusta el tamaño según tus necesidades */
+    height: 150px; /* Mantiene la proporción de la imagen */
+    float: left;
+    margin: 0; /* Elimina todo margen para ajustar espacios */
+    padding: 0; /* Asegura que no haya padding adicional */
+}
+        /* Estilos para la barra lateral */
+        #barra_lateral {
+            position: fixed;
+            width: 200px;
+            background-color: #06357a;
+            height: 100%; /* Para que la barra lateral ocupe toda la altura de la pantalla */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para el icono */
+        #barra_lateral .icono {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para la lista de la barra lateral */
+        #barra_lateral ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Estilos para los elementos de la lista */
+        #barra_lateral ul li {
+            color: white;
+            margin: 10px 0;
+            font-size: 18px; /* Tamaño de fuente ajustable */
+        }
+
+        /* Estilos para la imagen dentro de la lista */
+        #barra_lateral ul li img {
+            width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 50%; /* Hace la imagen redonda */
+            display: block;
+            margin: 0 auto 10px; /* Centra la imagen horizontalmente */
+        }
+
+        #barra_lateral button {
+    width: 100%; /* Asegura que el botón ocupe toda la anchura del li */
+    padding: 10px; /* Espacio dentro del botón */
+    background-color: #f0f0f0; /* Color de fondo */
+    color: #333; /* Color del texto */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor a mano */
+    text-align: left; /* Alinea el texto a la izquierda */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 2px 0; /* Margen entre botones */
+}
+
+#barra_lateral button:hover {
+    background-color: #e0e0e0; /* Cambio de color al pasar el ratón */
+}
+#login_button {
+    padding: 8px 16px; /* Añade padding para hacer el botón más grande */
+    background-color: #007BFF; /* Un azul estándar, cambia según tu paleta de colores */
+    color: white; /* Texto blanco */
+    border: none; /* No border */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano al pasar por encima */
+}
+
+#login_button:hover {
+    background-color: #0056b3; /* Un tono de azul más oscuro al pasar el mouse */
+}
+.contenedor-principal {
+    display: flex;
+}
+
+.panel-izquierdo {
+    width: 25%; /* O el ancho que prefieras */
+    background-color: #f4f4f4; /* Color de fondo para el panel izquierdo */
+    padding: 20px; /* Espaciado interno para el contenido */
+}
+
+.contenido-principal {
+    width: 75%; /* Resto del espacio */
+    padding: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/datid.png" id="l_datid" alt="logodatid">
+        <h1>GESTIÓN DE RESERVAS</h1>
+        <img src="img/utez.jpg" id="l_utez" alt="logoutez">
+        <button type="button" id="login_button">Cerrar sesion</button>
+    </header>    
+    <div id="barra_lateral">
+        <div class="icono">
+            
+        </div>
+        <ul>
+            <li><img src="img/ck.jpg" alt="yo ese" class="clark"></li>
+            <li><button type="button" onclick="mostrarMensaje('Mensaje para Usuario')">Usuario</button></li>
+            <li><button type="button" onclick="mostrarMensaje('Mensaje para Reservas')">Reservas</button></li>
+            <li><button type="button" onclick="mostrarMensaje('Mensaje para Espacios')">Espacios</button></li>
+            <li><button type="button" onclick="mostrarMensaje('Mensaje para Días inhabiles')">Días inhabiles</button></li>
+        </ul>
+    </div>
+    <div class="contenedor-principal">
+        <div class="panel-izquierdo" id="panel_izquierdo">
+        
+        </div>
+        <div class="contenido-principal">
+            <p>Solano CastilloS</p>
+            <p>Solano CastilloS</p>
+            <p>Solano CastilloS</p>
+            <p>Solano CastilloS</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensaje(mensaje) {
+            var panelIzquierdo = document.getElementById('panel_izquierdo');
+            panelIzquierdo.innerHTML = '<p>' + mensaje + '</p>';
+        }
+    </script>
+</body>
+</html>
+
+
